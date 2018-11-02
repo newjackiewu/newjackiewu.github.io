@@ -1,1 +1,817 @@
 
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>前端基础（版权&copy;吴子俊）</title>
+<style type="text/css">
+	
+*
+{
+	margin:0px;
+	padding:0px;
+	font-family:"Microsoft YaHei UI Light";	
+}
+
+
+header{
+	margin:1% auto;
+}
+header h1{
+	text-align:center;
+	text-shadow:2px 2px 2px	 #000000;
+}
+
+aside{
+	letter-spacing:1px;
+	position:fixed;
+	z-index:1;
+	width:12% ;
+	margin:1% 1% 1% 2px;
+}
+a{
+	line-height:40px;
+	display:block;
+	font-size:18px;
+}
+a:link{
+	color:#666;
+	text-decoration:none;
+}
+a:visited{
+	color:#666;
+	text-decoration:none;
+}
+ ul , li{
+	 list-style-type:none;
+ }
+
+ 
+.pmenu{
+	border-radius:10px;
+	font-family:"Microsoft YaHei UI Light";
+	background-color:#666;
+	color:#FFF;
+	font-size:40px;
+	text-indent:10px;
+	letter-spacing:6px;
+}
+
+/*#all{
+	display:none;
+}
+#menu:hover #all{
+	display:block;
+}*/
+
+.out{
+	text-indent:6px;
+	background-color:#CCC;
+	margin-top:1px;
+	margin-bottom:1px;
+	border:#000 1px solid;
+	font-weight:700;
+	font-size:18px;
+	display:block;
+	line-height:150%;
+	letter-spacing:1px;
+	border-radius:10px;
+}
+/*.zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}*/
+.aa,.ab,.ac,.ad,.ae,.af,.ag,.ah,.ai,.aj
+{
+	font-style:normal;
+	color:#999;
+	display:none;	
+}
+.aa a,.ab a,.ac a,.ad a,.ae a,.af a,.ag a,.ah a,.ai a,.aj a
+{
+	font-size:14px;	
+}
+.out1:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out2:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;	
+}
+.out3:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out4:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out5:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out6:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out7:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out8:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out9:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+.out10:hover .zz
+{
+	border-bottom:#000 1px dotted;
+	margin-bottom:2%;
+}
+
+.out1:hover .aa
+{
+	display:block;	
+}
+.out2:hover .ab
+{
+	display:block;	
+}
+.out3:hover .ac
+{
+	display:block;	
+}
+.out4:hover .ad
+{
+	display:block;
+}
+.out5:hover .ae
+{
+	display:block;
+}
+.out6:hover .af
+{
+	display:block;
+}
+.out7:hover .ag
+{
+	display:block;
+}
+.out8:hover .ah
+{
+	display:block;
+}
+.out9:hover .ai
+{
+	display:block;
+}
+.out10:hover .aj
+{
+	display:block;
+}
+
+
+
+
+section{	
+	line-height:160%;
+	width:70%;
+	height:60%;
+	margin:2% 5% 1% 20%;
+	border:#CCC 1px dotted;
+}
+
+footer{
+	color:#999;
+	position:fixed;
+	z-index:-2;
+	bottom:0%;
+	right:0%;
+	line-height:90%;
+	padding:2px 1px;
+	margin:3px;
+	border:#F40 double 3px;
+	font-family:"MS Serif", "New York", serif;
+}
+
+
+hr{
+	color:#999;	
+}
+
+
+</style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>前端基础知识概要:HTML5+CSS3篇</h1>
+        </header>
+        <aside>
+        <div  id="menu">
+            <p class="pmenu">目录</p>
+            <ul id="all">	
+                <li>
+                    <ul class="out out1">
+                        <ul>
+                          <li class="zz"><a href="#one" rel="#" >基本概念</a></li>
+                          <li class="aa"><a href="#one1" rel="#">概念</a></li>
+                          <li class="aa"><a href="#one2" rel="#">值和属性</a></li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out2">
+                        <li class="zz"><a href="#two" rel="#" >盒子模型</a></li>
+                        <li class="ab"><a  href="#two1" rel="#">盒子基本属性</a></li>
+                        <li class="ab"><a  href="#two2" rel="#">内边距</a></li>
+                        <li class="ab"><a  href="#two3" rel="#">外边距</a></li>
+                        <li class="ab"><a  href="#two4" rel="#">边框</a></li>
+                        <li class="ab"><a  href="#two5" rel="#">盒子模型计算</a></li>
+                        <li class="ab"><a  href="#two6" rel="#">块状/行间元素</a></li>
+                        <li class="ab"><a  href="#two7" rel="#">元素状态转换</a></li>
+                        <li class="ab"><a  href="#two8" rel="#">布局标签div</a></li>
+                        <li class="ab"><a  href="#two9" rel="#">float属性</a></li>
+                        <li class="ab"><a  href="#two10" rel="#">clear属性</a></li>
+                        <li class="ab"><a  href="#two11" rel="#">塌陷问题</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out3">
+                        <li class="zz"><a href="#three" rel="#" >文本</a></li>
+                        <li class="ac"><a  href="#three1" rel="#">文本标签</a></li>
+                        <li class="ac"><a  href="#three2" rel="#">字体样式</a></li>
+                        <li class="ac"><a  href="#three3" rel="#">文本样式</a></li>
+                    </ul>
+                </li>
+                    <ul class="out out4">
+                        <li class="zz"><a href="#four" rel="#" >图片</a></li>
+                        <li class="ad"><a  href="#four1" rel="#">图片格式</a></li>
+                        <li class="ad"><a  href="#four2" rel="#">背景设置</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out5">  
+                        <li class="zz"><a href="#five" rel="#" >超级链接</a></li>
+                        <li class="ae"><a  href="#five1" rel="#">href属性</a></li>
+                        <li class="ae"><a  href="#five2" rel="#">伪类</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out6">  
+                        <li class="zz"><a href="#six" rel="#" >列表</a></li>
+                        <li class="af"><a  href="#six1" rel="#">列表种类</a></li>
+                        <li class="af"><a  href="#six2" rel="#">列表样式</a></li>  
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out7">      
+                        <li class="zz"><a href="#seven" rel="#" >表单</a></li>
+                        <li class="ag"><a  href="#seven1" rel="#">输入型</a></li>
+                        <li class="ag"><a  href="#seven2" rel="#">新增输入型</a></li>
+                        <li class="ag"><a  href="#seven3" rel="#">选择型</a></li>
+                        <li class="ag"><a  href="#seven4" rel="#">新增选择型</a></li>
+                        <li class="ag"><a  href="#seven5" rel="#">事件型</a></li>
+                        <li class="ag"><a  href="#seven6" rel="#">常用属性</a></li>
+                        <li class="ag"><a  href="#seven7" rel="#">应用技巧</a></li>
+                        <li class="ag"><a  href="#seven8" rel="#">标记标签 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out8">  
+                        <li class="zz"><a href="#eight" rel="#" >表格</a></li>
+                        <li class="ah"><a  href="#eight1" rel="#">表格的作用</a></li>
+                        <li class="ah"><a  href="#eight2" rel="#">结构特点</a></li>
+                        <li class="ah"><a  href="#eight3" rel="#">表格结构的扩展</a></li>
+                        <li class="ah"><a  href="#eight4" rel="#">表格样式</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out9">  
+                        <li class="zz"><a href="#nine" rel="#" >多媒体</a></li>
+                        <li class="ai"><a  href="#nine1" rel="#">常见类型</a></li>
+                        <li class="ai"><a  href="#nine2" rel="#">flash动画</a></li>
+                        <li class="ai"><a  href="#nine3" rel="#">flash视频</a></li>
+                        <li class="ai"><a  href="#nine4" rel="#">web视频</a></li>
+                        <li class="ai"><a  href="#nine5" rel="#">音频</a></li>
+                        <li class="ai"><a  href="#nine6" rel="#">HTML5解决方案</a></li>
+                        <li class="ai"><a  href="#nine7" rel="#">应用总结</a></li>
+                        <li class="ai"><a  href="#nine8" rel="#">PC端解决方案</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="out out10">  
+                        <li class="zz"><a href="#ten" rel="#" >定位层</a></li>
+                        <li class="aj"><a  href="#ten1" rel="#">定位属性</a></li>
+                        <li class="aj"><a  href="#ten2" rel="#">特点</a></li>
+                        <li class="aj"><a  href="#ten3" rel="#">实际应用</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </aside>
+          <section>
+        
+        <h2 id="one">基本概念</h2>
+            <h4 id="one1">概念</h4>
+                <p>一种符号（尖括号），两种标签（单、双标签），三个组成（标签名、属性、值）<br>
+                css样式三种引用方式：行间引用、内联引用、外链引用；就近原则使用样式<br>
+                常用选择符：标签选择符、id选择符、class选择符；优先级id>class>标签<br>
+                组合选择符：通配选择符（*）、包含选择符（父对象a  子对象b）、群组选择符（对象a，对象b，对象c...）、指定选择符（标签名.class类名）<br>
+                CSS权重<br>
+                ！important          Infinity<br>
+                行间元素                1000（256进制）<br>
+                id                           100<br>
+                class/属性/伪类     10<br>
+                标签/伪元素           1<br>
+                通配符                    0<br>
+                </p>
+                <h4 id="one2">值和属性：</h4>
+                    <p> 数值单位：px、em、%<br>
+                    方向：top、right、bottom、left<br>
+                    色彩：16进制代码(#RRGGBB或#RGB)/基本色彩单词（如：red）<br>
+                    引用路径：url（文件路径）</br>
+                    </p>
+<hr>
+                <h2 id="two">盒子模型</h2>content、padding、border、margin
+                    <h4 id="two1">盒子基本属性</h4>
+                        内容区域设定：width/height<br>
+                    <h4 id="two2">内边距</h4>
+                        <p> 
+                        padding复合属性（复合属性方向缩写a所有，ab上下\左右、abc上\左右\下、abcd上\右\下\左）<br>
+                        padding-top/padding-right/padding-bottom/padding-left
+                         </p>
+                    <h4 id="two3">外边距</h4>
+                         <p>
+                         margin复合属性<br>
+                         margin-top/margin-right/margin-bottom/margin-left
+                          </p>
+                    <h4 id="two4">边框</h4>
+                        <p>
+                        border复合属性<br>
+                        按方向分类：border-top/border-right/border-bottom/border-left<br>
+                        按属性要素分类：<br>
+                         border-width<br>
+                         border-style(double、dotted、solid、dashed、outset、inset、groove、ridge)<br>
+                         border-color
+                         </p>
+                <h4 id="two5">盒子模型计算</h4>
+                    <p>
+                    盒子类型box-sizing(默认值)<br>
+                    标准盒子content-box/框架盒子（怪异盒子）border-box：盒子尺寸=width/height
+                    </p>
+                <h4 id="two6">块状元素（block）/行间元素（inline）</h4>
+                        <p>
+                         块状元素：<br>
+                        独占一行，直接适用盒模型所有属性。<br>
+                        &lt; div &gt; &lt; header &gt; &lt; section &gt; &lt; footer &gt; &lt; aside &gt; &lt; nav &gt; / &lt; h1 &gt; &lt; h6 &gt; / &lt; p &gt; / &lt; ul &gt; &lt; ol &gt; &lt; dl &gt; &lt; li &gt; / &lt; form&gt; <br>
+                        行间元素：<br>
+                       不独占一行，部分适用盒模型属性，宽度由内容决定，受行的限制高度及上下的边距设置无效。<br>
+                        &lt; span &gt; &lt; a &gt; &lt; strong &gt; &lt; em &gt;
+                        </p>
+                    <h4 id="two7">元素状态转换</h4>
+                        <p>
+                        display：设置对象的显示方式<br>
+                        block（块状元素默认值）<br>
+                        inline（行间元素默认值）<br>
+                        inline-block（&lt; img &gt; / &lt; form &gt;）<br>
+                        none<br>
+                        </p>
+                    <h4 id="two8">通用布局标签&lt; div &gt;</h4>
+                   HTML5新增布局标签&lt; header &gt; &lt; section &gt; &lt; footer &gt; &lt; aside &gt; &lt; nav &gt;<br>
+                   <h4 id="two9">float浮动属性</h4>
+                      <p>
+                      作用：将页面元素浮动起来，使其能过向左或者向右排列<br>
+                      应用：实现页面中布局的左右排版/实现图文环绕的办事效果<br>
+                      值：left/right/none<br>
+                      原理：浮动元素将脱离默认的文档流，漂浮在默认文档流之上。浮动的元素会向左或者向右移动，直到它的外边缘碰到父级元素或这个元素之前的另一个浮动元素的边框为止。<br>
+                      对齐方式：不管元素如何浮动，始终以父级容器或它前面同层次并列的元素作为参考进行对齐。<br>
+                      特点：一旦元素浮动起来，就可以直接适用CSS盒子模型属性。浮动元素仍然会影响到默认文档流中盒子内装的”内容“，内容会给浮动元素留出占位。
+                      </p>
+                    <h4 id="two10">clear清除属性</h4>
+                        <p>
+                        作用：规定元素在某一侧不允许存在浮动元素<br>
+                        应用：消除其他浮动元素对其的产生的影响，解决网页”塌陷“问题（如果父元素只包含浮动元素，那么在未设置高度的同时，则父元素高度塌缩为零）<br>
+                        值：both/left/right/none<br>
+                        原理：设置了clear的元素不再向前一个浮动元素对齐，换行重新开始。
+                        </p>
+                    <h4 id="two11">解决塌陷问题方法：</h4>
+                    <p>
+                        1.创建一个用来清除浮动的CSS样式类（.clearfix）。2.针对包裹的全是浮动元素的父级容器使用（.clearfix）<br>
+                        .clearfix{zoom:1;}<br>
+                        .clearfix:after{content:"."display:block;visibility:hidden;height:0;clear:both;}
+                        </p>
+<hr>
+              <h2 id="three">文本标签及样式</h2>
+                 <h4 id="three1">文本标签</h4>
+                    <p> 标题标签：&lt; h1 &gt; - &lt; h6 &gt; <br>
+                     段落标签：&lt; p &gt; <br>
+                     换行标签：&lt; br &gt; <br>
+                     水平线标签：&lt; hr &gt; <br>
+                     强调文本标签：&lt; strong &gt; / &lt; em &gt; <br>
+                     特色文本标签：&lt;b &gt; &lt; i &gt; <br>
+                     微组合标签：&lt; span &gt; <br>
+                    </p>
+                 <h4 id="three2">字体样式：</h4>
+                     <p>
+                     font-family（支持多个取值，以逗号隔开，发现第一个不支持，再使用第二种字体。如果字体系列名称超过一个字，必须用引号括起来。）  设置文本的字体系列<br>
+                     font-size（绝对大小px和相对大小em、%。通常使用绝对大小定义文档的基准字号，然后使用相对大小定义其他文本。PC端>=12px，移动端>=20px，PC端浏览器默认为16px。）  设置文本的字号大小<br>
+                      color 设置文本的色彩（前景色）<br>
+                      font-weight （正常状态：值=normal（400）、加粗状态：值=bold（700））设置文本的粗细<br>
+                      font-style  （normal、italic、oblique）设置文本的风格（斜体样式）<br>
+                      font （顺序：font-style font-variant font-weight font-size/line-height font-family）复合属性
+                      </p>
+                 <h4 id="three3">文本样式</h4>
+                      <p>
+                      text-align 设置文本的水平对齐方式<br>
+                      left/center/right/justify<br>
+                      text-decoration 设置文本的修饰方式<br>
+                      none/underline/line-through/overline<br>
+                      text-indent 设置文本的首行缩进<br>
+                      text-transform 设置文本的转换（针对英文）<br>
+                      uppercase/lowercase/capitalize<br>
+                      text-shadow 设置文本的阴影效果<br>
+                      水平阴影位置>垂直阴影位置>模糊程度>阴影颜色<br>
+                      line-height （相对单位时以文本为基准，150%-180%之间最舒服）  设置文本行高<br>
+                      overflow（overflow-x、overflow-y，只适用于block元素。值：visible、hidden、scroll（溢出才激活）、auto）  设置文本（容器内部内容）溢出的控制方式<br>
+                      letter-spacing  设置文本字符之间的间距<br>
+                      word-spacing 设置词语之间的间距<br>
+                      word-break  （break-all、keep-all）设置文本自动换行的方法<br>
+                      </p> 
+                      <hr>
+                      <h2 id="four">web图片标签及样式</h2>
+                 <h4 id="four1">web图片的格式</h4>
+                        <p>
+                        JPG，有损压缩，不支持透明度，.jpg/.jpeg<br>
+                        PNG，无损压缩，支持透明度，.png，8（全透明/不透明）、24、32位三种形式<br>
+                        GIF，无损压缩，支持透明度，.gif，256种色彩，全透明/不透明<br>
+                        &lt; img&gt;的属性<br>
+                        src <br>
+                        alt<br>
+                        title<br>
+                        width<br>
+                        height
+                        </p>
+                  <h4  id="four2">背景设置</h4>
+                        <p>
+                        background基本属性<br>
+                        background-color 默认transparent<br>
+                        background-image<br>
+                        background-repeat repeat/repeat-x/repeat-y/no-repeat<br>
+                        background-attachment  scroll/fixed/local<br>
+                        background-position 两个值：1.横向坐标值 2.纵向坐标值；一个值：横向坐标值，纵向坐标值默认50%<br>
+                        background<br>
+                        值得声明顺序为 background-color background-image background-repeat backgroun-attachment background-position
+                        </p>
+                        <hr>
+                     <h2 id="five">超级链接</h2>
+                        <h4  id="five1">标签&lt; a &gt; </h4>
+                        <p>
+                        href属性：<br>
+                        链接的常见形式<br>
+                        锚点（anchor） ：设置herf属性的值为#+id名<br>
+                        相对路径<br>
+                        绝对路径  协议/域名/文件路径<br>
+                        空链接<br>
+                        邮箱链接 mailto:<br>
+                        电话链接<br>
+                        target属性：<br>
+                        _self<br>
+                        _blank
+                        </p>
+                        <h4   id="five2">伪类</h4>
+                        <p>
+                        ：link 未被访问的链接状态  a<br>
+                        ：visited 已被访问的链接状态  a<br>
+                        ：hover 鼠标悬停的状态   所有元素<br>
+                        ：action 被激活时的状态  a<br>
+                        ：focus 获得焦点时的状态 表单控件
+                        </p>
+                        <hr>
+                        <h2 id="six">列表</h2>
+                        <h4 id="six1">列表种类</h4>
+                        <p>
+                        无序列表 ul + li<br>
+                        有序列表  ol + li<br>
+                        定义列表 dl  + dt + dd
+                        </p>
+                        <h4 id="six2">列表样式：list-style</h4>
+                        <p>
+                        list-style<br>
+                        list-style-type(disc\decimal\none)<br>
+                        list-style-image<br>
+                        list-style-position
+                        </p>
+                        <hr>
+                        <h2 id="seven">表单控件（表单元素）的类型</h2>
+                        <p>
+                        表单&lt; form &gt;<br>
+                        action url路径<br>
+                        method get/post<br>
+                        name 自定义名称
+                        </p>
+                          <h4 id="seven1">输入型</h4>
+                          <p>
+                          单行文本框input（单标签，常用属性type，定义表单控件类型；value定义表单的默认值）<br>
+                          普通文本 text<br>
+                          密码 password<br>
+                          隐藏域 hidden
+                          </p>
+                           <h4 id="seven2">HTML5新增的input输入控件</h4>
+                            <p>
+                            网址 url<br>
+                            邮箱 email<br>
+                            数字 number<br>
+                            数字范围 range<br>
+                            时间选取器 date<br>
+                            色彩拾取器 color<br>
+                            搜索 search<br>
+                            电话 tel
+                            </p>
+                       
+                        <p>多行文本框textarea（双标签）</p>
+                        
+                         <h4 id="seven3">选择型</h4>
+                        <p>
+                        单选按钮 type=“radio”，编组使用name属性，设定按钮已选中状态使用checked属性<br>
+                        复选按钮type=“checkbox”<br>
+                        列表值 option标签<br>
+                        下拉列表<br>
+                        下拉列表区 select标签  selected默认选中状态，multiple可选多个选项，size可见选项数目，使用optgrounp标签个列表中的选项进行分组
+                        </p>
+                       
+                        <h4 id="seven4">HTML5新增选择性控件</h4>
+                        <p>
+                        提示控件datalist<br>
+                        提示列表区域 datalist<br>
+                        列表值 option标签 
+                        </p>
+                        <h4 id="seven5">事件型 </h4>
+                        <p>
+                        button<br>
+                        submit<br>
+                        reset<br>
+                        image<br>
+                        file 
+                       </p>        
+                        
+                          <h4 id="seven6">表单/表单控件常用属性</h4>
+                        <p>
+                        value 输入类，定义初始值；选择类，定义相关联的值，事件类，定义按钮呈现的文本<br>
+                        readonly  只读属性           应用对象输入框类型<br>
+                        disabled  禁用属性           应用所有表单控件<br>
+                        placeholder 占位符属性<br>
+                        required 必填属性<br>
+                        autofocus 自动获得焦点属性<br>
+                        autocomplete 自动完成属性
+                        </p>
+                      
+                       <h4 id="seven7">表单应用技巧</h4>                     	
+                       <p>
+                       使用&lt; label &gt;提高用户操作交互体验<br>
+                       使用&lt; fieldset &gt;协助表单控件或数据归类分组
+                       </p>
+                      
+                      <h4 id="seven8">表单标记标签：&lt; label &gt;</h4>
+                        <p>
+                        双标签，行间元素，默认无任何特殊样式。<br>
+                        为表单控件提供辅助标记。点击&lt; label &gt;中的标记内容，浏览器就会自动将焦点转到和&lt; label &gt;相关的表单控件上。<br>
+                        使用&lt; label &gt;将标记内容和表单控件括在一起，增加控件的可操作性。<br>
+                        使用&lt; label &gt;标签的 for 属性将其和相关控件关联到一起，for属性的值为控件的id名。<br>
+                        表单控件分组标签：&lt; fieldset &gt;<br>
+                        双标签，块状元素，创建一个分组区域。<br>
+                        主要用于将表单内的相关控件进行分组，便于辨识或区分，默认会呈现区域边框效果。<br>
+                        表单控件分组标题标签：&lt; legend &gt;<br>
+                        双标签，块状元素。<br>
+                        用来为&lt; fieldset &gt;分组定义一个标题，作为表单内容的说明或描述。
+                        </p>
+                        <hr>
+                    <h2 id="eight">网页元素：表格</h2>   
+                        <h4 id="eight1">表格的作用及应用场景</h4>
+                            <p>
+                            呈现数据或统计信息（类似于word或excel中的表格）的版块布局。<br>
+                            面对某些特定的设计，如表单输入、数据呈现时，表格则可能是最恰当的布局方式。<br>
+                            购物车<br>
+                            赛程表 / 节目单<br>
+                            统计表<br>
+                            </p>
+                            <h4 id="eight2">表格的基本结构特点</h4>
+                            <p>
+                            3个基本标签是表格的基本构成结构，缺一不可且嵌套关系不可改变。<br>
+                            多个&lt;td&gt;形成&lt;tr&gt;，多个&lt;tr&gt;形成&lt;table&gt;。<br>
+                            通常我们看到表格的纵向列，在标签结构中是由&lt;td&gt;标签形成的。
+                            </p>
+                            <h4 id="eight3">表格结构的扩展：</h4>
+                            <p>
+                            &lt;th&gt;经常会用到，默认有粗体效果。<br>
+                            如果使用 &lt;thead&gt;、&lt;tbody&gt;、&lt;tfoot&gt;，必须一起使用。且顺序是&lt;thead&gt; &gt;&lt;tfoot&gt; &gt; &lt;tbody&gt;。<br>
+                            单元格的属性：<br>
+                            colspan 跨列，横向合并<br>
+                            rowspan 跨行，纵向合并
+                            </p>
+                            <h4 id="eight4">CSS：表格样式</h4>
+                           <p>
+                            表格边框设置：<br>
+                            默认情况下，表格&lt;table&gt;和单元格&lt;td&gt;都有边框的设置。<br>
+                            通过 border-collapse 属性可以将两者的边框进行合并。<br>
+                            border-collapse<br>
+                            separate  默认值。&lt;table&gt;边框和&lt;td&gt;边框独立分开。<br>
+                            collapse &lt;table&gt;边框和&lt;td&gt;边框合并成为单一的边框。<br>
+                            单元格&lt;td&gt;的特性：<br>
+                            可以把&lt;td&gt;看作是个box进行设置，其display模式为table-cell。<br>
+                            对宽高的设置敏感且会自动分配，以适配于&lt;table&gt;的总宽高。<br>
+                            完美呈现vertical-align属性效果，实现&lt;td&gt;中的内容元素垂直居中。<br>
+                            vertical-align<br>
+                            top 顶部对齐<br>
+                            middle 垂直居中对齐<br>
+                            bottom 底部对齐<br>
+                            vertical-align 是个“奇葩”的属性，入门阶段姑且粗暴的这么分类罢了…
+                            </p>
+<hr>
+                    <h2 id="nine">多媒体类型及应用</h2>
+                        <h4 id="nine1">多媒体的常见类型：</h4>
+                        <p>
+                        动画（Flash）<br>
+                        视频（Video）<br>
+                        音频（Audio）
+                        </p>
+                        <h4 id="nine2">flash动画</h4>
+                        <p>
+                        格式：.swf<br>
+                        特点：体积小，效果炫酷<br>
+                        场景：广告宣传、特效制作…<br>
+                        实现方法：使用flash播放器播放<br>
+                        PS：IOS系不支持，多用于PC端，移动端很少用。
+                        <p>
+                        flash动画
+                        代码重点：<br>
+                        &lt;object&gt;标签<br>
+                        定义嵌入的对象，双标签，可嵌套使用。<br>
+                        &lt;param&gt;标签<br>
+                        设置嵌入对象的参数，单标签。<br>
+                        条件注释语句<br>
+                        只有IE认识的判断浏览器种类或版本的代码<br>
+                        透明flash动画的应用：<br>
+                        有些时候需要使用透明背景的flash动画来给页面添加动画特效，利用&lt;param&gt;标签设置flash动画的窗口模式为“透明”，即可消除flash动画文件中的默认背景。wmode代表窗口模式，值为transparent代表透明。
+                        </p>
+                        <h4 id="nine3">flash视频</h4>
+                        <p>
+                        flash视频的播放类型：<br>
+                        累进式下载：<br>
+                        将 Flash 视频 (FLV) 文件下载到站点访问者的硬盘上然后播放。允许在下载完成之前就开始播放视频文件。<br>
+                        流视频：
+                        将 Flash 视频内容进行流处理并立即在 Web 页面中播放。视频采用流式传播（视频文件变成了数据包），能很快就开始显示无须等待，适用在线观看、直播等等。设置流视频需要服务器权限及相关配置。<br>
+                        flashvar参数设置：<br>
+                        &lt;param name=“FlashVvars”&gt;用来设置flash视频的一些重要参数。<br>
+                        &amp; 是各参数之间的分隔。<br>
+                        streamName 设置flv文件地址<br>
+                        </p>
+                        <h4 id="nine4">web视频</h4>
+                        <p>
+                        目前web视频主流播放方式：<br>
+                        通过flash player播放器进行播放<br>
+                        通过HTML5播放方式<br>
+                        目前web视频主流格式：<br>
+                        .mp4<br>
+                        .flv<br>
+                        .f4v<br>
+                        推荐web视频解决方案：<br>
+                        使用云服务（牛X服务商提供的一站式视频服务）：适用于个人、中小型企业<br>
+                        各大视频网站用户服务（不花钱滴）：适用个人或临时性<br>
+                        PS：大型公司集团要构建自己的视频服务器
+                        </p>
+                        <h4 id="nine5">音频</h4>
+                        <p>
+                        目前web音频主流播放方式：<br>
+                        通过脚本播放器插件进行播放<br>
+                        通过HTML5播放方式<br>
+                        目前web音频主流格式：<br>
+                        .mp3<br>
+                        .ogg
+                        </p>
+                        
+                        <h4 id="nine6">HTML5 多媒体</h4>
+                        <p>
+                        HTML5提供了直接内嵌视频/音频方式，使用浏览器支持的视频/音频格式来进行播放。<br>
+                        特点：<br>
+                        不需要加载播放器组件<br>
+                        对移动端支持更好<br>
+                        不同浏览器对视频格式的支持不同，所以提供多种格式的视频文件，以满足各个浏览器播放的兼容性<br>
+                        多媒体：HTML5视频/音频<br>
+                        &lt;video&gt;视频标签  & &lt;audio&gt;音频标签<br>
+                        &lt;video&gt;标签用于播放视频， &lt;audio&gt;标签用于播放音频。<br>
+                        都是双标签，开始标签和结束标签之间的内容是用来供不支持的浏览器显示。<br>
+                        可以使用src属性来指定视频/音频文件路径地址，type属性来指定文件的格式类型。<br>
+                        &lt;video&gt;标签支持的视频格式：<br>
+                        HTML5 视频的使用技巧：<br>
+                        目前国内的主流视频站点，在PC端仍然以老派的flash播放器方式实现视频播放。<br>
+                        但在移动端，现代浏览器都对HTML5支持良好，所以基本都采用了HTML5视频播放。<br>
+                        尽管 .mp4成为最多支持的格式，但为了更多用户考虑，还是推荐准备多种格式，使用&lt;source&gt;标签来进行调用。<br>
+                        DW中，只要你做好了视频格式的准备工作，推荐使用前台操作（插入命令）来实现视频添加和设置，DW会帮你直接完善代码。<br>
+                        可以看出主流浏览器的高版本全部都支持 .mp4 格式<br>
+                        多媒体：HTML5音频<br>
+                        HTML5 音频的使用技巧：<br>
+                        参考&lt;video&gt;的技巧。<br>
+                        音频文件需要添加controls属性，呈现出播放器界面，不然就成了背景音乐，部分浏览器不支持且用户无法控制，体验度差。<br>
+                        &lt;source&gt;资源标签：<br>
+                        &lt;source&gt; 标签为媒体元素（ &lt;video&gt; 和 &lt;audio&gt;）定义媒体资源，单标签。<br>
+                        通常使用多个&lt;source&gt;来设定多种视频/音频文件格式，供浏览器根据自身的支持度进行选择。<br>
+                        使用type属性来指定文件的格式类型，src属性来指定视频/音频文件路径地址。<br>
+                        应该为每个source元素指定type属性，这样可以提高网络性能，不用让浏览器选择一个source,下载一段段视频，再判断格式是否支持。<br>
+                        浏览器从第一个source开始解析，遇到能读取播放的格式才加载呈现。所以通常第一个指定应该是最流行的（.mp4/.mp3）<br>
+                        type的值：视频或音频 / 格式名称
+                        </p>
+                        <h4  id="nine7">多媒体：web应用总结</h4>
+                        <p>
+                        html：&lt;object&gt;对象<br>
+                        &lt;object&gt;标签：<br>
+                        用来定义嵌入的对象，如音频、视频、Java applets、ActiveX、PDF 以及 Flash等。<br>
+                        双标签，&lt;object&gt; 与 &lt;/object&gt; 之间的文本是替换文本，针对不支持此标签的浏览器。<br>
+                        可以使用type属性指定嵌入对象的MIME类型（设定用什么应用程序来打开文件）。<br>
+                        可以使用data属性指定嵌入对象的URL路径。<br>
+                        使用&lt;object&gt;元素，必须指定type属性或data属性其中之一。<br>
+                        html：&lt;param&gt;<br>
+                        &lt;param&gt;标签常用设置：<br>
+                        用来为包含它的&lt;object&gt;对象设置参数。<br>
+                        name属性定义参数的名称（主要用在脚本中）。<br>
+                        value属性描述参数值。<br>
+                        html：&lt;embed&gt;<br>
+                        &lt;embed&gt;标签：<br>
+                        HTML 5 中的新标签，双标签。<br>
+                        定义了一个容器（box），用来嵌入外部应用或者互动程序（插件）。<br>
+                        新浏览器都支持它，但为了兼容旧浏览器，还是建议使用DW生成的脚本来嵌入多媒体对象。（或者把&lt;embed&gt;和&lt;object&gt;联合使用）
+                        </p>
+                        <h4  id="nine8">PC端使用多媒体解决方案：</h4>
+                        <p>
+                        1、采用swfobject脚本实现（DW生成，兼容性好）。<br>
+                        2、&lt;object&gt;+&lt;embed&gt;实现 。<br>
+                        移动端使用多媒体解决方案：<br>
+                        采用HTML5视频/音频实现。
+                        </p>
+<hr>
+                        <h2 id="ten">定位层</h2>
+                       
+                        <h4 id="ten1">定位属性position</h4>
+                        <p> 
+                        static  （默认值），静态定位 无定位，出现在默认文档流中<br>
+                        absolute 绝对定位 相对于非static定位的第一个父元素进行定位<br>
+                        relative 相对定位  相对自身在默认文档流中的正常位置进行定位<br>
+                        fixed 绝对定位 相对于浏览器窗口进行定位<br>
+                        当html元素（标签）被设置成定位层（非static）之后。可以激活定位相关的属性top/right/bottom/left设置<br>
+                        这4个定位控制属性均可以使用负值。同方向有冲突时，以top、left优先<br>
+                        z-index属性<br>
+                        规定定位元素的堆叠顺序，拥有更高顺序的元素总是会处于较低顺序的元素的前面<br>
+                        z-index的值是指定顺序关系，因此是number数字形式，没有单位。<br>
+                        z-index的值允许设置负值。当值为负值时，定位层处于普通文档流之下，会被覆盖。
+                         </p>
+                        <h4 id="ten2">特点</h4>
+                        <p> 
+                        完全脱离默认文档流，独立于立体层面的Z轴之上。和float浮动一样都脱离了默认文档流。但float元素与默认文档流之间会相互产生影响，而定位层元素则完全独立，互不干扰。<br>
+                        让元素inline-block化。例如一个div标签默认宽度是100%显示的，但是一旦变成absolute绝对定位，则默认独占一行的宽度就会变成自适应内部元素的宽度。<br>
+                        通常当我们将html元素设置成了定位层之后，就需要指定其宽度和高度。<br>
+                        绝对定位和相对定位的区别：<br>
+                        absolute元素完全脱离默认文档流，不保留占位空间。<br>
+                        relative元素完全脱离默认文档流，但仍然保留在默认文档流中的占位空间。
+                         </p>
+                        <h4 id="ten3">实际应用方案</h4>
+                        <p> 
+                        将relative相对层（父级）和absolute绝对层（子级）结合一起使用。实现某些栏目或板块中，内容元素的重叠或位移效果。<br>
+                        相对层+绝对层的应用技巧：<br>
+                        1、在页面中给某个元素（父级对象）设置相对定位，使其成为所包含的子级对象的定位参照物。通常不设置其具体定位位置，保留其占据默认文档流空间的特性，不妨碍整体布局。  <br>
+                        2、相对层对象的内部，添加子级对象设置绝对定位，然后用相关定位属性控制其位置，以实现重叠或位移效果。
+  </p>
+ <hr>                    
+        </section>
+        <footer>
+        版<br>
+        权<br>
+        &copy;<br>
+        吴<br>
+        子<br>
+        俊<br>
+        个<br>
+        人<br>
+        所<br>
+        有
+        </p>
+        </footer>
+    
+    </div>
+
+</body>
+</html>
+
